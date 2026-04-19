@@ -24,9 +24,9 @@ ul { list-style: none; }
    ================================================ */
 header { height: 100px; display: flex; align-items: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(255,255,255,0.98); z-index: 2600; }
 header .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-.logo { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; transition: opacity 0.3s; }
+.logo { display: flex; align-items: center; transition: opacity 0.3s; flex-shrink: 0; }
 .logo:hover { opacity: 0.7; }
-.logo span { color: var(--primary); margin-left: 4px; }
+.logo img { height: 40px; width: auto; display: block; }
 
 
 nav ul { display: flex; gap: 24px; align-items: center; }
@@ -128,7 +128,8 @@ textarea.form-control { resize: vertical; }
    ================================================ */
 footer { background: #0c0c0c; color: #fff; padding: 120px 0 60px; }
 .footer-grid { display: grid; grid-template-columns: 2.5fr 1fr 1.2fr 1fr; gap: 80px; margin-bottom: 100px; }
-.footer-logo { font-size: 22px; font-weight: 800; margin-bottom: 30px; }
+.footer-logo { margin-bottom: 30px; }
+.footer-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
 .footer-links h4 { font-size: 13px; margin-bottom: 30px; color: #fff; font-weight: 800; letter-spacing: 0.1em; }
 .footer-links li { margin-bottom: 15px; font-size: 13px; }
 .footer-links a { opacity: 0.6; }
@@ -217,8 +218,7 @@ footer { background: #0c0c0c; color: #fff; padding: 120px 0 60px; }
 
     /* Header */
     header { height: 60px; }
-    .logo { font-size: 15px; }
-    .logo span { font-size: 15px; }
+    .logo img { height: 28px; }
     .hamburger { display: block; }
     nav { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: #fff; z-index: 2500; padding: 80px 24px 40px; transition: right 0.3s ease; box-shadow: -10px 0 30px rgba(0,0,0,0.1); overflow-y: auto; }
     nav.open { right: 0; }
@@ -333,7 +333,8 @@ footer { background: #0c0c0c; color: #fff; padding: 120px 0 60px; }
     /* Footer */
     footer { padding: 60px 0 30px !important; }
     .footer-grid { gap: 24px !important; margin-bottom: 40px !important; }
-    .footer-logo { font-size: 18px; margin-bottom: 16px; }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 28px; }
     .footer-links h4 { font-size: 13px; margin-bottom: 16px !important; }
     .footer-links li { margin-bottom: 10px; }
     .footer-links li a { font-size: 13px; }
